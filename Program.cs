@@ -8,6 +8,7 @@ using System.IO;
 namespace Remindertask
 {
     class Program
+   
     {
         static void Main(string[] args)
         {
@@ -25,7 +26,7 @@ namespace Remindertask
             Console.WriteLine("Congratulation! You are on your way to organize your life.");
             Console.WriteLine("----------------------------------------------------------");
             //Console.WriteLine("Option 1 = Press 1 to add  tasks to list");
-            Console.WriteLine("1. Add to List ||2. View List ||3. Skip the item ||0.Exit");
+            Console.WriteLine("1. Add to List ||2. View List ||3. Skip the item ||4. Complete Tasks ||0.Exit");
             Console.WriteLine("Enter your selection:");
             //Console.WriteLine("Option 2 = Press 2 to view the list");
             //Console.WriteLine("Option 3 = Press 3 to skip the item");
@@ -51,6 +52,12 @@ namespace Remindertask
                 return true;
 
             }
+            else if (result == "4")
+            {
+                CompleteTask();
+                return true;
+
+            }
             else if (result == "0")
             {
                 return false;
@@ -66,7 +73,7 @@ namespace Remindertask
         static void AddTask()
         {
             Console.Clear();
-            Console.WriteLine(" Please add any task that you like to complete");
+            Console.WriteLine(" Please add any task that you like to complete : Press esc to return to main menu");
             //string [] lines = Console.ReadLine();
             string Things = @"Testttt.txt";
             ConsoleKeyInfo cki;
@@ -129,5 +136,24 @@ namespace Remindertask
             Console.WriteLine("Press up arrow to skiptask");
             Console.ReadLine();
         }
+
+        static void CompleteTask()
+        {
+            Console.Clear();
+            Console.WriteLine("Press C arrow to CompleteTask");
+            Console.ReadLine();
+        }
     }
+
+
 }
+
+
+
+
+
+
+
+
+
+
