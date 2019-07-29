@@ -143,10 +143,142 @@ namespace Remindertask
             Console.WriteLine("Press C arrow to CompleteTask");
             Console.ReadLine();
         }
+
+        /*
+        private List<string> tasks;
+        private List<bool> isActioned;
+
+        public App()
+        {
+
+            ReadListFromFile();
+        }
+        public void Run()
+        {
+            bool quit;
+            do
+            {
+                PrintTaskList();
+                var key = RunInputCycle();
+                quit = HandleUserInput(key);
+
+            } while (!quit);
+
+            WriteListToFile();
+            Console.WriteLine(); //Ensure "Press any key to quit..." is on its own line
+
+        }
+
+        private ConsoleKey RunInputCycle()
+        {
+            ConsoleKey key;
+
+            PrintUsageOption();
+            key = GetInputFromUser();
+
+            return key;
+        }
+
+        private bool HandleUserInput(ConsoleKey key)
+        {
+            switch (key)
+            {
+                case ConsoleKey.A:
+                    InputTaskToList();
+                    break;
+                case ConsoleKey.D:
+                    break;
+                case ConsoleKey.N:
+                    break;
+                case ConsoleKey.DownArrow:
+                    break;
+                case ConsoleKey.Enter:
+                    break;
+                case ConsoleKey.Q:
+                    return true;
+
+            }
+
+            return false;
+        }
+
+        private ConsoleKey GetInputFromUser()
+        {
+            return Console.ReadKey().Key;
+        }
+
+        private void PrintUsageOption()
+        {
+            Console.WriteLine("a: add | d:delete | n: next page | downarrow: select | enter: action | q: quit");
+            Console.Write("Input");
+        }
+
+        private void InputTaskToList()
+        {
+            Console.Clear();
+            Console.Write("Add a new task:(empty to cancel):");
+
+            var input = Console.ReadLine();
+
+            if (!string.IsNullOrWhiteSpace(input))
+            {
+
+                tasks.Add(input);
+
+            }
+        }
+
+        private void PrintTaskList()
+        {
+            Console.Clear();
+            foreach (var t in tasks)
+            {
+                Console.WriteLine(t);
+            }
+
+            Console.WriteLine();
+        }
+
+
+        private void ReadListFromFile()
+        {
+
+            try
+            {
+                using (StreamReader sr = new StreamReader(@"D:\TaskList.txt"))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        var input = sr.ReadLine();
+                        tasks.Add(input);
+                        isActioned.Add(false);
+                    }
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                ;
+            }
+
+
+        }
+        private void WriteListToFile()
+        {
+            using (StreamWriter sw = new StreamWriter(@"D:\TaskList.txt"))
+            {
+                foreach (var t in tasks)
+                {
+                    sw.WriteLine(t);
+                }
+            }
+        }
+        */
     }
-
-
 }
+    
+
+
+
 
 
 
